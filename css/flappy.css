@@ -10,9 +10,10 @@
 [wm-flappy] {
     position: relative;
     border: 5px solid dodgerblue;
-    height: 700px;
+    height: 550px;
     width: 1200px;
-    margin: 15px;
+    margin-left: 5%;
+    margin-top: 2px;
     background-color: deepskyblue;
     overflow: hidden;
 }
@@ -61,10 +62,9 @@
     font-size: 70px;
 }
 
-
 .score-class {
     font-family: Pixel;
     font-size: 70px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }

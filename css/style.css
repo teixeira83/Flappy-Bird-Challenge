@@ -1,3 +1,22 @@
+.dropdown-lang {
+    margin-left: -180px;
+}
+
+.dropdown-person{
+    margin-left: 100%;
+}
+
+.drop-lang {
+    color: #212529;
+    background-color: #fff;
+}
+
+.globo-lang{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
 @font-face {
     font-family: 'Oswald';
     src: url('../fonts/Oswald-Regular.ttf') format('truetype');
@@ -13,14 +32,13 @@ html {
 
 body {
     margin: 0;
-    background-color: #0D262D;
-    color: #fff;
+    background-color: #fff;
     height: 100%;
 }
 
 .conteudo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     min-height: 100%;
 }
@@ -53,3 +71,65 @@ body {
     color: greenyellow;
     font-weight: bold;
 }
+
+.container {
+    max-width: 960px;
+}
+  
+.site-header {
+background-color: rgba(0, 0, 0, .85);
+-webkit-backdrop-filter: saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+color: #999;
+transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+color: #fff;
+text-decoration: none;
+}
+
+.product-device {
+position: absolute;
+right: 10%;
+bottom: -30%;
+width: 300px;
+height: 540px;
+background-color: #333;
+border-radius: 21px;
+-webkit-transform: rotate(30deg);
+transform: rotate(30deg);
+}
+
+.product-device::before {
+position: absolute;
+top: 10%;
+right: 10px;
+bottom: 10%;
+left: 10px;
+content: "";
+background-color: rgba(255, 255, 255, .1);
+border-radius: 5px;
+}
+
+.product-device-2 {
+top: -25%;
+right: auto;
+bottom: 0;
+left: 5%;
+background-color: #e5e5e5;
+}
+
+.flex-equal > * {
+-ms-flex: 1;
+flex: 1;
+}
+@media (min-width: 768px) {
+.flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+}
+}
+
+.overflow-hidden { overflow: hidden; }

@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang=pt-br>
-    <head>
-        <meta charset="UTF-8">
-        <title>Flappy Bird</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/flappy.css">
-    </head>
-    <body class="conteudo">        
-            <div class="idioma-class">
-                <span>Idioma/Language</span>
-                <a href="main-pt.html" ><img src="imgs/brasilFlag.jpg"></img></a>
-                <img src="imgs/apitinhoBebezinho.png"></img>
-                <a href="main-en.html" ><img src="imgs/usaFlag.jpg"></img></a>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/flappy.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row ">
+            <div class="dropdown-lang">
+                    <button class="btn btn-default dropdown-toggle drop-lang" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="imgs/globo.png" class="globo-lang">
+                        Language
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><img class="globo-lang" src="imgs/bandeira-br.png">PT-BR</a>
+                        <a class="dropdown-item" href="#"><img class="globo-lang" src="imgs/bandeira-usa.png">English</a>
+                    </div>
             </div>
-    </body>
+
+            <div class="dropdown-person">
+                    <button class="btn btn-default dropdown-toggle drop-lang" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Your Char
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><img class="globo-lang" src="imgs/apitinhoBebezinho.png">Apitinho</a>
+                        <a class="dropdown-item" href="#"><img class="globo-lang" src="imgs/passaro.png">Flappy</a>
+                    </div>
+            </div>
+        </div>   
+    </nav>
+    
+    <div class="conteudo">
+        <div score class="score-class">
+                <span>Score::</span>
+        </div>
+        <div wm-flappy></div>
+    </div>
+            <script src="js/jquery-3.4.31.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="css/bootstrap/js/bootstrap.min.js"></script>
+            <script src="js/flappy.js"></script>
+</body>
+
 </html>

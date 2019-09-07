@@ -1,27 +1,3 @@
-// class Apito{
-//     constructor(velocidaeInicial){
-//         this.velocidade=velocidaeInicial
-//         this.setVelocidade(this.velocidade)
-
-//     }
-//     acelerar(){
-//         var velocidadeAtual=this.getVelocidade()
-//         console.log("Velocidade antes de alterar: " +velocidadeAtual)
-//         setVelocidade(velocidadeAtual+0.2)
-//     }
-//     getVelocidade(){
-//         return velocidade;
-//     }
-//     setVelocidade(valor){
-//         console.log("setouVelocidade")
-//         this.velocidadeAtual=valor
-//     }
-//     iniciarJogo(){
-//         new FlappyBird().start()
-//     }    
-// }
-
-
 function newElement(tagName, className){
 
     const element = document.createElement(tagName)
@@ -39,10 +15,6 @@ function Barreira(reversa = false){
 
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
-
-// const b = new Barreira(true)
-// b.setAltura(200)
-// document.querySelector('[wm-flappy]').appendChild(b.elemento)
 
 function ParDeBarreiras(altura, abertura, x){
     this.elemento = newElement('div', 'barreiras')
@@ -68,9 +40,6 @@ function ParDeBarreiras(altura, abertura, x){
     this.setX(x)
 }
 
-// const b = new ParDeBarreiras(700, 200, 800)
-// document.querySelector('[wm-flappy]').appendChild(b.elemento)
-
 function Barreiras(altura, largura, abertura, distancia, notificarPonto){
 
     this.pares = [
@@ -79,7 +48,7 @@ function Barreiras(altura, largura, abertura, distancia, notificarPonto){
         new ParDeBarreiras(altura, abertura, largura + distancia * 2),
         new ParDeBarreiras(altura, abertura, largura + distancia * 3)
     ]
-    const deslocamento=10
+    const deslocamento=3
     this.animar = () => {
         this.pares.forEach( par => {
             par.setX(par.getX() - deslocamento)
@@ -192,8 +161,3 @@ function FlappyBird(){
 }
 
 new FlappyBird().start()
-
-//const ApitinhoFofinho=new Apito(3)
-//ApitinhoFofinho.iniciarJogo()
-
-
