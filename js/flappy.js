@@ -1,10 +1,33 @@
+// class Apito{
+//     constructor(velocidaeInicial){
+//         this.velocidade=velocidaeInicial
+//         this.setVelocidade(this.velocidade)
+
+//     }
+//     acelerar(){
+//         var velocidadeAtual=this.getVelocidade()
+//         console.log("Velocidade antes de alterar: " +velocidadeAtual)
+//         setVelocidade(velocidadeAtual+0.2)
+//     }
+//     getVelocidade(){
+//         return velocidade;
+//     }
+//     setVelocidade(valor){
+//         console.log("setouVelocidade")
+//         this.velocidadeAtual=valor
+//     }
+//     iniciarJogo(){
+//         new FlappyBird().start()
+//     }    
+// }
+
+
 function newElement(tagName, className){
 
     const element = document.createElement(tagName)
     element.className =  className
     return element
 }
-
 
 function Barreira(reversa = false){
     this.elemento = newElement('div', 'barreira')
@@ -56,8 +79,7 @@ function Barreiras(altura, largura, abertura, distancia, notificarPonto){
         new ParDeBarreiras(altura, abertura, largura + distancia * 2),
         new ParDeBarreiras(altura, abertura, largura + distancia * 3)
     ]
-
-    const deslocamento = 3
+    const deslocamento=10
     this.animar = () => {
         this.pares.forEach( par => {
             par.setX(par.getX() - deslocamento)
@@ -75,9 +97,10 @@ function Barreiras(altura, largura, abertura, distancia, notificarPonto){
 }
 
 function Passaro(alturaJogo){
+    const apitoVivo= 'imgs/lilpito.png'
     let voando = false
     this.elemento = newElement('img', 'passaro')
-    this.elemento.src = 'imgs/apito.png'
+    this.elemento.src = apitoVivo
 
     this.getY = () => parseInt(this.elemento.style.bottom.split('px')[0])
     this.setY = y => this.elemento.style.bottom = `${y}px`
@@ -110,7 +133,6 @@ function Progresso(){
 }
 
 function estaoSobrepostos(elementoA, elementoB){
-
     const a = elementoA.getBoundingClientRect()
     const b = elementoB.getBoundingClientRect()
 
@@ -158,6 +180,11 @@ function FlappyBird(){
             barreiras.animar()
             passaro.animar()
             if(colidiu(passaro, barreiras)) {
+                const apitoMorto='imgs/apito.png'
+                var elemento=document.getElementsByClassName("passaro")
+                elemento.src=apitoMorto
+                console.log("morreu")
+                console.log(elemento)
                 clearInterval(temporizador)
             }
         }, 20)
@@ -165,4 +192,8 @@ function FlappyBird(){
 }
 
 new FlappyBird().start()
+
+//const ApitinhoFofinho=new Apito(3)
+//ApitinhoFofinho.iniciarJogo()
+
 
