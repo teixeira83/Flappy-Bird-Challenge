@@ -1,7 +1,12 @@
 <h1 align="center">Welcome to Custom FlappyBird-Challenge 👋</h1>
 <p>
   <a href="https://github.com/teixeira83/Flappy-Bird-Challenge">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="58" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h41v20H0z"/><path fill="#fe7d37" d="M41 0h17v20H41z"/><path fill="url(#b)" d="M0 0h58v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="215" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="310">HTML</text><text x="215" y="140" transform="scale(.1)" textLength="310">HTML</text><text x="485" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="70">5</text><text x="485" y="140" transform="scale(.1)" textLength="70">5</text></g> </svg>
+    <img src="https://img.shields.io/badge/HTML-5-orange">
+    <img src="https://img.shields.io/badge/Bootstrap-4.3.1-%23ff69b4">
+    <img src="https://img.shields.io/badge/javascript-ES6-green">
+    <img src="https://img.shields.io/badge/jQuery-3.4.1-yellowgreen">
+    <img src="https://img.shields.io/badge/popper-js-brightgreen">
+    <img src="">
   </a>
 </p>
 
@@ -9,10 +14,13 @@
 
 ### 🏠 [Homepage](https://github.com/teixeira83/Flappy-Bird-Challenge)
 
+![Image exemplo](https://github.com/teixeira83/Flappy-Bird-Challenge/blob/master/imgs/exemplo-jogopng.png)
+
 ## Install
 
 ```sh
-npm install
+Não precisa instalar nada!
+Só abrir o arquivo index.html em algum browser atualizado.
 ```
 
 ## Author
